@@ -25,3 +25,7 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+g1 = Guest.create(name: "vera", occupation: "idk" )
+g2 = Guest.create(name: "fdfg", occupation: "idk" )
+g3 = Guest.create(name: "as", occupation: "idk" )
+g4 = Guest.create(name: "dh", occupation: "idk" )

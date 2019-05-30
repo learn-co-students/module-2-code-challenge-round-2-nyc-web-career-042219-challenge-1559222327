@@ -1,0 +1,8 @@
+"New Appearance"
+
+<%= form_for @episode do |f| %>
+<%= f.text_field :name %>
+<%= f.text_field :occupation %>
+<%= f.collection_select :guest_id, Guest.all, :id, :name%>
+<%= f.button %>
+<% end %>
