@@ -7,12 +7,13 @@ class AppearancesController < ApplicationController
   end
 
   def create
-    byebug
     @appearance = Appearance.new(appearance_params)
     @episode = Episode.find(appearance_params[:episode_id])
     if @appearance.save
       redirect_to episode_path(@episode)
     else
+      @episodes = Episode.all
+      @guests = Guest.all
       render :new
     end
   end
