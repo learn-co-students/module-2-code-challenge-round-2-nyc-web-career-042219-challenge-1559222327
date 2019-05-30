@@ -1,5 +1,17 @@
 <h1><%= @guest.name %></h1>
 
+<h4>Occupation</h4>
 <ul>
 	<li><%= @guest.occupation %></li>
 </ul>
+
+<% if @guest.episodes.length > 0 %>
+	<h4>Appearances</h4>
+	<ol>
+		<% @guest.episodes.each do |e| %>
+			<li><%= link_to "Episode #{e.number}  -  #{e.date.strftime("%B %d, %Y")}", e %></li>
+		<% end %>
+	</ol>
+<% else %>
+	<h4>No Appearances :(</h4>
+<% end %>

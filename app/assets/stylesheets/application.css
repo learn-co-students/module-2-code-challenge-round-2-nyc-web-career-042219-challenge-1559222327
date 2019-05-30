@@ -16,4 +16,24 @@
 
 body {
   font-family: fantasy;
+  color: green;
+  background-color: black;
+}
+
+li {
+  font-size: 120%;
+}
+
+h1 {
+  color: blue;
+
+}
+
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a:visited {
+  color: gray;
 }

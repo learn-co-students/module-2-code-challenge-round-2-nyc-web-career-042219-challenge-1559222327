@@ -1,7 +1,12 @@
 <h1>Episode #<%= @episode.number %></h1>
 
-<ul>
-	<% @episode.guests.each do |g| %>
-		<li><%= g.name %> - <%= g.occupation %></li>
-	<% end %>
-</ul>
+<% if @episode.guests.length > 0 %>
+	<h4>Guests</h4>
+	<ul>
+		<% @episode.guests.each do |g| %>
+			<li><%= link_to "#{g.name} - #{g.occupation}", g %></li>
+		<% end %>
+	</ul>
+<% else %>
+	<h4>No Guests :(</h4>
+<% end %>
