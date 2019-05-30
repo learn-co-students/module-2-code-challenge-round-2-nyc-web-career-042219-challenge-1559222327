@@ -1,0 +1,7 @@
+<%= form_for @appearance, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+
+  <%= f.number_field :rating%>
+  <%= f.collection_select(:guest_id, Guest.all, :id, :name) %>
+  <%= f.collection_select(:episode_id, Episode.all, :id, :date) %>
+  <%= f.submit "Create" %>
+<% end %>
